@@ -11,23 +11,6 @@
 <body>
 
   <!-- ═══════════════════════════════════════
-       NAV
-       ═══════════════════════════════════════ -->
-  <nav class="nav" id="nav">
-    <a href="#" class="nav-logo">Oui Dentelle</a>
-    <ul class="nav-links">
-      <li><a href="#about">À propos</a></li>
-      <li><a href="#music">Musique</a></li>
-      <li><a href="#video">Vidéo</a></li>
-      <li><a href="#shows">Spectacles</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <button class="nav-burger" aria-label="Menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
-
-  <!-- ═══════════════════════════════════════
        HERO
        ═══════════════════════════════════════ -->
   <section class="hero">
@@ -292,27 +275,6 @@
   </footer>
 
   <script>
-    // ── Nav scroll effect ──────────────────────────────────
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('nav--scrolled', window.scrollY > 60);
-    }, { passive: true });
-
-    // ── Burger menu (mobile) ──────────────────────────────
-    const burger = document.querySelector('.nav-burger');
-    const navLinks = document.querySelector('.nav-links');
-    burger.addEventListener('click', () => {
-      const open = burger.getAttribute('aria-expanded') === 'true';
-      burger.setAttribute('aria-expanded', String(!open));
-      navLinks.classList.toggle('nav-links--open', !open);
-    });
-    navLinks.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        burger.setAttribute('aria-expanded', 'false');
-        navLinks.classList.remove('nav-links--open');
-      });
-    });
-
     // ── Fade-in on scroll ─────────────────────────────────
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => {
