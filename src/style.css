@@ -1,8 +1,17 @@
 /* ════════════════════════════════════════════════════════════
    OUI DENTELLE — stylesheet
    Palette: indigo foncé · crème · or
-   Typo   : Cormorant Garamond (display) · EB Garamond (body)
+   Typo   : Brasika (display) · EB Garamond (body)
    ════════════════════════════════════════════════════════════ */
+
+/* ─── FONTS ──────────────────────────────────────────────── */
+@font-face {
+  font-family: 'Brasika';
+  src: url('../public/fonts/Brasika.otf') format('opentype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* ─── TOKENS ──────────────────────────────────────────────── */
 :root {
@@ -13,7 +22,7 @@
   --cream-dim:    #c8b99a;
   --gold:         #b8965a;
   --gold-dim:     rgba(184,150,90,0.35);
-  --font-d: 'Cormorant Garamond', serif;
+  --font-d: 'Brasika', 'Cormorant Garamond', serif;
   --font-b: 'EB Garamond', serif;
   --ease:   cubic-bezier(0.4, 0, 0.2, 1);
   --max-w:  1100px;
