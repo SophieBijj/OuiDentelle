@@ -7,7 +7,7 @@
 /* ─── FONTS ──────────────────────────────────────────────── */
 @font-face {
   font-family: 'Brasika';
-  src: url('../public/fonts/Brasika.otf') format('opentype');
+  src: url('../Brasika.otf') format('opentype');
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
