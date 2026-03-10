@@ -579,12 +579,32 @@ a     { color: inherit; }
 .show-ticket { white-space: nowrap; }
 
 /* ─── CONTACT ────────────────────────────────────────────── */
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.4fr;
-  gap: 5rem;
-  align-items: start;
-  margin-top: 0;
+.contact-minimal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+
+.contact-social {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+}
+
+.contact-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cream-dim);
+  transition: color 0.3s;
+}
+.contact-social a:hover { color: var(--gold); }
+.contact-social svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
 }
 
 .contact-text p {
