@@ -228,32 +228,21 @@ a     { color: inherit; }
   letter-spacing: 0.18em;
 }
 
-/* Show dates inside hero */
-.hero-shows {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
+/* Shows block inside hero */
+.hero-shows-block {
+  width: 100%;
+  max-width: 480px;
+  text-align: center;
 }
-.hero-show-item {
-  display: flex;
-  gap: 0.8rem;
-  align-items: baseline;
-  text-decoration: none;
-  color: var(--cream-dim);
-  font-size: 0.7rem;
-  letter-spacing: 0.15em;
-  transition: color 0.3s;
+.hero-shows-block .shows-season {
+  margin-bottom: 0.8rem;
 }
-.hero-show-item:hover { color: var(--cream); }
-.hero-show-date {
-  color: var(--gold);
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  min-width: 3rem;
-  text-align: right;
+.hero-shows-block .shows-list {
+  margin-top: 0;
 }
-.hero-show-venue { font-style: italic; }
+.hero-shows-block .show-row {
+  padding: 0.8rem 0;
+}
 
 /* Social row */
 .social-row {
