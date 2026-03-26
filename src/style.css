@@ -137,7 +137,6 @@ a   { color: inherit; }
 .hero {
   position: relative;
   aspect-ratio: 1 / 1;
-  max-height: 100vh;
   overflow: hidden;
 }
 .hero-img {
@@ -150,16 +149,17 @@ a   { color: inherit; }
 .hero-overlay {
   position: absolute;
   inset: 0;
+  pointer-events: none;
   background: linear-gradient(to bottom,
     rgba(26,23,48,0.05) 0%,
     rgba(26,23,48,0.35) 50%,
     rgba(26,23,48,0.90) 100%);
 }
 
-/* Dates en bas du hero */
+/* Dates en bas du hero — commence après 900px pour inciter au scroll */
 .hero-dates {
   position: absolute;
-  bottom: 3.5rem;
+  top: 62%;
   left: 0; right: 0;
   z-index: 2;
   max-width: 680px;
@@ -486,5 +486,5 @@ a   { color: inherit; }
 
 @media (max-width: 540px) {
   .section    { padding-block: 4rem; }
-  .hero-dates { bottom: 2rem; }
+  .hero-dates { top: 55%; }
 }
