@@ -17,7 +17,6 @@
     <a href="index.html" class="nav-logo">Oui Dentelle</a>
     <ul class="nav-links" id="nav-links">
       <li><a href="bio.html">Bio</a></li>
-      <li><a href="#shows">Printemps 2026</a></li>
       <li><a href="#video">Vidéos</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -30,6 +29,7 @@
        HERO
        ═══════════════════════════════════════ -->
   <section class="hero">
+    <div class="hero-img" style="background-image: url('Hero_Background2 .jpg');"></div>
     <div class="hero-overlay"></div>
     <div class="hero-grain"></div>
     <div class="hero-content">
@@ -130,6 +130,8 @@
        PROCHAINS SHOWS
        ═══════════════════════════════════════ -->
   <section class="section" id="shows">
+    <p class="section-label">Live</p>
+    <h2 class="section-title">Prochains shows</h2>
     <p class="shows-season">Printemps 2026</p>
     <div class="shows-list">
 
@@ -164,8 +166,16 @@
        CONTACT
        ═══════════════════════════════════════ -->
   <section class="section" id="contact">
+    <p class="section-label">Contact</p>
+    <h2 class="section-title">Écrire un message</h2>
+    <!--
+      FORMSPREE — comment activer le formulaire :
+      1. Va sur https://formspree.io et crée un compte gratuit avec ouidentelle@gmail.com
+      2. Crée un nouveau "Form" → copie l'URL qui ressemble à https://formspree.io/f/abcd1234
+      3. Remplace YOUR_FORMSPREE_ID ci-dessous par cet ID (ex: abcd1234)
+    -->
     <form
-      action="https://formspree.io/f/mbdpjyvo"
+      action="https://formspree.io/f/YOUR_FORMSPREE_ID"
       method="POST"
       class="contact-form"
     >
