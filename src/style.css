@@ -156,10 +156,10 @@ a   { color: inherit; }
     rgba(26,23,48,0.90) 100%);
 }
 
-/* Dates en bas du hero — commence après 900px pour inciter au scroll */
+/* Dates en bas du hero — 900px sur l'image source de 1920px = 47% */
 .hero-dates {
   position: absolute;
-  top: 62%;
+  top: 47%;
   left: 0; right: 0;
   z-index: 2;
   max-width: 680px;
@@ -275,9 +275,9 @@ a   { color: inherit; }
 
 /* ─── VIDÉOS ──────────────────────────────────────────────── */
 .video-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 .video-frame {
   width: 100%;
@@ -481,7 +481,7 @@ a   { color: inherit; }
   .nav-links a     { display: block; padding: 0.9rem 0; font-size: 0.75rem; }
   .nav-burger      { display: flex; }
 
-  .video-grid { grid-template-columns: 1fr; }
+
 }
 
 @media (max-width: 540px) {
