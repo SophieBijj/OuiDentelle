@@ -229,6 +229,7 @@ a     { color: inherit; }
 }
 
 /* Shows block inside hero */
+.hero-title { margin-bottom: 1.8rem; }
 .hero-shows-block {
   width: 100%;
   max-width: 480px;
