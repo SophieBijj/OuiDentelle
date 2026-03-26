@@ -316,6 +316,13 @@ a     { color: inherit; }
 }
 
 .about-photo-wrap { position: relative; }
+.about-photo {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
 .about-photo-placeholder {
   width: 100%;
   aspect-ratio: 3 / 4;
