@@ -124,7 +124,7 @@ a     { color: inherit; }
   aspect-ratio: 1 / 1;
   max-height: 100vh;
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   justify-content: center;
   overflow: hidden;
 }
@@ -229,7 +229,7 @@ a     { color: inherit; }
 }
 
 /* Shows block inside hero */
-.hero-title { margin-bottom: 1.8rem; }
+.hero-spacer { flex: 1; min-height: 1rem; }
 .hero-shows-block {
   width: 100%;
   max-width: 480px;
@@ -516,6 +516,8 @@ a     { color: inherit; }
 .stream-btn:hover { border-color: var(--gold); color: var(--cream); }
 
 /* ─── VIDEO ──────────────────────────────────────────────── */
+.video-frame--second { margin-top: 3rem; }
+
 .video-frame {
   width: 100%;
   aspect-ratio: 16 / 9;
