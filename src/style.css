@@ -523,6 +523,14 @@ a     { color: inherit; }
 .play-circle svg { width: 22px; fill: var(--cream-dim); margin-left: 4px; }
 
 /* ─── SHOWS ──────────────────────────────────────────────── */
+.shows-season {
+  font-size: 0.65rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--cream-dim);
+  margin-bottom: 0.6rem;
+}
+
 .shows-list {
   margin-top: 3rem;
   display: flex;
@@ -628,6 +636,7 @@ a     { color: inherit; }
   display: flex;
   flex-direction: column;
   gap: 1.4rem;
+  max-width: 520px;
 }
 .form-field {
   display: flex;
