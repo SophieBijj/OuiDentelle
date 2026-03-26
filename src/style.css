@@ -118,132 +118,57 @@ a     { color: inherit; }
   transition: transform 0.3s, opacity 0.3s;
 }
 
+/* ─── ACCESSIBILITÉ SEO ──────────────────────────────────── */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* ─── HERO ───────────────────────────────────────────────── */
 .hero {
   position: relative;
-  aspect-ratio: 1 / 1;
-  max-height: 100vh;
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
+  height: 100vh;
   overflow: hidden;
 }
 .hero-img {
   position: absolute;
   inset: 0;
-  background-size: cover;
-  background-position: center top;
-  transform: scale(1.05);
-  animation: heroScale 14s ease-out forwards;
-}
-@keyframes heroScale {
-  to { transform: scale(1); }
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
 }
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(to bottom,
-      rgba(26,23,48,0.2) 0%,
-      rgba(26,23,48,0.5) 60%,
-      rgba(26,23,48,0.95) 100%),
-    radial-gradient(ellipse at center, transparent 30%, rgba(26,23,48,0.6) 100%);
+  background: linear-gradient(to bottom,
+    rgba(26,23,48,0.1) 0%,
+    rgba(26,23,48,0.45) 55%,
+    rgba(26,23,48,0.92) 100%);
 }
 
-/* Film-grain texture */
-.hero-grain {
+/* Dates overlaid on hero */
+.hero-dates {
   position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-  background-size: 200px;
-  opacity: 0.3;
-  pointer-events: none;
-  animation: grain 8s steps(10) infinite;
-}
-@keyframes grain {
-  0%,100% { background-position: 0 0; }
-  10%  { background-position: -5% -10%; }
-  20%  { background-position: -15% 5%; }
-  30%  { background-position: 7% -25%; }
-  40%  { background-position: 20% 10%; }
-  50%  { background-position: -10% 15%; }
-  60%  { background-position: 15% -5%; }
-  70%  { background-position: 0 20%; }
-  80%  { background-position: -20% 0; }
-  90%  { background-position: 10% 5%; }
-}
-
-.hero-content {
-  position: relative;
+  bottom: 4rem;
+  left: 0;
+  right: 0;
   z-index: 2;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.8rem;
-  padding: 18vh var(--px) 2rem;
-  animation: fadeUp 1.6s ease both;
-  animation-delay: 0.2s;
-  opacity: 0;
-}
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(28px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-/* Gold ornament line */
-.lace-line {
-  width: 160px;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--gold), transparent);
-  position: relative;
-}
-.lace-line::before, .lace-line::after {
-  content: '✦';
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 8px;
-  color: var(--gold);
-  opacity: 0.8;
-}
-.lace-line::before { left: 28px; }
-.lace-line::after  { right: 28px; }
-
-.hero-title {
-  font-family: var(--font-d);
-  font-size: clamp(3.8rem, 11vw, 8rem);
-  font-weight: 300;
-  letter-spacing: 0.16em;
-  line-height: 1;
-  color: var(--cream);
-  text-shadow:
-    0 0 80px rgba(184,150,90,0.25),
-    0 2px 6px rgba(0,0,0,0.6);
-}
-.hero-sub {
-  font-family: var(--font-d);
-  font-size: clamp(0.85rem, 1.8vw, 1.05rem);
-  color: var(--cream-dim);
-  letter-spacing: 0.18em;
-}
-
-/* Shows block inside hero */
-.hero-spacer { flex: 1; min-height: 1rem; }
-.hero-shows-block {
-  width: 100%;
-  max-width: 480px;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--px);
   text-align: center;
 }
-.hero-shows-block .shows-season {
-  margin-bottom: 0.8rem;
-}
-.hero-shows-block .shows-list {
-  margin-top: 0;
-}
-.hero-shows-block .show-row {
-  padding: 0.8rem 0;
-}
+.hero-dates .shows-season { margin-bottom: 0.8rem; }
+.hero-dates .shows-list { margin-top: 0; }
+.hero-dates .show-row { padding: 0.8rem 0; }
 
 /* Social row */
 .social-row {
