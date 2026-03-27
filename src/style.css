@@ -401,7 +401,7 @@ a   { color: inherit; }
   overflow: hidden;
   position: relative;
   z-index: 0;
-  margin-top: -14rem;
+  margin-top: -8rem;
 }
 
 /* Image de fond — occupe la même cellule grid que footer-inner */
@@ -524,16 +524,14 @@ a   { color: inherit; }
   /* Icônes sociales cachées dans la nav → burger visible, nav non surchargée */
   .nav-social { display: none; }
 
-  /* Hero mobile : hauteur forcée = 100vw × (1500/900), overflow visible
-     pour que les dates puissent déborder sur le fond mauve si besoin */
+  /* Hero mobile : ratio exact de l'image, aucun recadrage */
   .hero {
     aspect-ratio: unset;
     min-height: calc(100vw * 1500 / 900);
-    overflow: visible;
   }
 
-  /* Dates après 975px sur image 1500px de haut (≈ 65%) */
-  .hero-dates { top: 66%; }
+  /* Dates : position en px calquée sur l'image (975px sur 1500px → 65% de la hauteur rendue) */
+  .hero-dates { top: calc(100vw * 975 / 900); }
 
   /* Chevauchement du footer réduit sur mobile */
   .footer { margin-top: -6rem; }
