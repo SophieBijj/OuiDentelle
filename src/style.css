@@ -521,11 +521,12 @@ a   { color: inherit; }
 @media (max-width: 860px) {
   :root { --px: 1.5rem; }
 
-  /* Hero mobile 900×1200 → ratio 3:4 */
-  .hero { aspect-ratio: 3 / 4; }
+  /* Hero mobile : image à ses dimensions naturelles, sans recadrage */
+  .hero { aspect-ratio: unset; }
+  .hero-img { position: relative; inset: unset; height: auto; }
 
-  /* Réduire le chevauchement du footer sur mobile */
-  .footer { margin-top: -6rem; }
+  /* Chevauchement du footer sur mobile */
+  .footer { margin-top: -10rem; }
 
   .about-grid { grid-template-columns: 1fr; gap: 3rem; }
   .about-photo-wrap::after { display: none; }
