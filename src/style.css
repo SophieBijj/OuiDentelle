@@ -524,11 +524,13 @@ a   { color: inherit; }
   /* Icônes sociales cachées dans la nav → burger visible, nav non surchargée */
   .nav-social { display: none; }
 
-  /* Hero mobile : flux naturel = image entière garantie, jamais recadrée */
-  .hero { aspect-ratio: unset; }
-  .hero-img { position: relative; inset: unset; width: 100%; height: auto; }
+  /* Hero mobile : hauteur forcée = 100vw × (1500/900), image non recadrée */
+  .hero {
+    aspect-ratio: unset;
+    min-height: calc(100vw * 1500 / 900);
+  }
 
-  /* Dates après 975px sur image 1500px de haut (= 65%) → 66% */
+  /* Dates après 975px sur image 1500px de haut (≈ 65%) */
   .hero-dates { top: 66%; }
 
   /* Chevauchement du footer réduit sur mobile */
