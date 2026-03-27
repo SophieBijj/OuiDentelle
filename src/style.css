@@ -521,8 +521,15 @@ a   { color: inherit; }
 @media (max-width: 860px) {
   :root { --px: 1.5rem; }
 
-  /* Hero mobile : ratio exact 900×1500 → aucun recadrage */
-  .hero { aspect-ratio: 900 / 1500; }
+  /* Icônes sociales cachées dans la nav → burger visible, nav non surchargée */
+  .nav-social { display: none; }
+
+  /* Hero mobile : flux naturel = image entière garantie, jamais recadrée */
+  .hero { aspect-ratio: unset; }
+  .hero-img { position: relative; inset: unset; width: 100%; height: auto; }
+
+  /* Dates après 975px sur image 1500px de haut (= 65%) → 66% */
+  .hero-dates { top: 66%; }
 
   /* Chevauchement du footer réduit sur mobile */
   .footer { margin-top: -6rem; }
@@ -547,14 +554,8 @@ a   { color: inherit; }
   .nav-links li    { width: 100%; text-align: center; }
   .nav-links a     { display: block; padding: 0.9rem 0; font-size: 0.75rem; }
   .nav-burger      { display: flex; }
-
-
-}
-
-@media (max-width: 860px) {
-  .hero-dates { top: 62%; }
 }
 
 @media (max-width: 540px) {
-  .section    { padding-block: 4rem; }
+  .section { padding-block: 4rem; }
 }
