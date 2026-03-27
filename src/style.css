@@ -521,8 +521,9 @@ a   { color: inherit; }
 @media (max-width: 860px) {
   :root { --px: 1.5rem; }
 
-  /* Hero mobile 900×1200 → ratio 3:4 */
-  .hero { aspect-ratio: 3 / 4; }
+  /* Hero mobile : image entière, sans recadrage */
+  .hero { aspect-ratio: unset; }
+  .hero-img { position: relative; inset: unset; height: auto; }
 
   /* Chevauchement du footer réduit sur mobile */
   .footer { margin-top: -6rem; }
