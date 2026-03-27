@@ -91,12 +91,12 @@ a   { color: inherit; }
 }
 .nav-logo:hover { color: var(--gold); }
 
-/* Social — centre */
+/* Social — gauche */
 .nav-social {
   display: flex;
   gap: 1.2rem;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 /* Liens + burger — droite */
