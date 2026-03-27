@@ -370,6 +370,9 @@ a   { color: inherit; }
 .footer {
   display: grid;
   overflow: hidden;
+  margin-top: -12rem; /* chevauche la fin du contact */
+  position: relative;
+  z-index: 1;
 }
 
 /* Image de fond — occupe la même cellule grid que footer-inner */
@@ -380,7 +383,7 @@ a   { color: inherit; }
 .footer-img {
   width: 100%;
   display: block;
-  max-height: 520px;
+  max-height: 800px;
   object-fit: cover;
   object-position: center bottom;
 }
