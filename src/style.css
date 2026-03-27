@@ -401,9 +401,6 @@ a   { color: inherit; }
   overflow: hidden;
   position: relative;
   z-index: 0;
-}
-/* Sur la landing page seulement : chevauche la fin du contact */
-.footer--home {
   margin-top: -12rem;
 }
 
