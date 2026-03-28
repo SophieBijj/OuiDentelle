@@ -454,7 +454,7 @@ a   { color: inherit; }
   font-size: 0.62rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: rgba(200,185,154,0.25);
+  color: rgba(200,185,154,0.65);
 }
 
 /* ─── BIO PAGE ────────────────────────────────────────────── */
@@ -521,8 +521,9 @@ a   { color: inherit; }
 @media (max-width: 860px) {
   :root { --px: 1.5rem; }
 
-  /* Icônes sociales cachées dans la nav → burger visible, nav non surchargée */
-  .nav-social { display: none; }
+  /* Nav mobile : icônes plus petites pour coexister avec le burger */
+  .nav-social { gap: 0.7rem; }
+  .nav-social svg { width: 14px; height: 14px; }
 
   /* Hero mobile : ratio exact de l'image, aucun recadrage */
   .hero {
